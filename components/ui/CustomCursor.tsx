@@ -39,7 +39,7 @@ const CustomCursor: React.FC = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-[60] bg-law-gold mix-blend-difference"
+        className="fixed top-0 left-0 w-4 h-4 rounded-full pointer-events-none z-[60] bg-judiciary-buff mix-blend-difference"
         animate={{
           x: mousePosition.x - 8,
           y: mousePosition.y - 8,
