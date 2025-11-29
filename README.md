@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Siddhi - High Court Counsel Portfolio
 
-# Run and deploy your AI Studio app
+A premium, high-end portfolio for a High Court Advocate & Solicitor, designed with a cold, authoritative, and judicial aesthetic.
 
-This contains everything you need to run your app locally.
+![Status](https://img.shields.io/badge/Status-Production-gold)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1co9z_bZaAhB1ndqQ0V16bJImING4MFsc
+## ⚖️ Aesthetic & Design
+- **Theme**: Cold Judiciary (Obsidian, Pearl, Burnished Gold).
+- **Typography**: `Cinzel` (Headers), `Cormorant Garamond` (Body), `Space Mono` (Data/Meta).
+- **Vibe**: Elite, Exclusive, Intimidating yet Sophisticated. "Boss Lady" energy.
+- **Interactions**: Smooth `Lenis` scrolling, 3D parallax effects, magnetic cursors, and glassmorphism.
 
-## Run Locally
+## 🛠 Tech Stack
+- **Framework**: React 18 (Vite)
+- **Styling**: Tailwind CSS (CDN/JIT)
+- **Animations**: Framer Motion
+- **Smooth Scroll**: Lenis
+- **Icons**: Lucide React
 
-**Prerequisites:**  Node.js
+## 🚀 Deployment
+This project is configured for seamless deployment on Vercel or Netlify.
 
+1. **Clone the repository**
+2. **Install dependencies**: `npm install`
+3. **Run locally**: `npm run dev`
+4. **Build for production**: `npm run build`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📂 Project Structure
+- `/components`: Modular UI sections (Hero, Intro, Practice, etc.)
+- `/utils`: Helper functions (cn, etc.)
+- `index.html`: Entry point with CDN configurations for fonts and Tailwind.
+
+---
+*Lex & Veritas. Unwavering Representation.*
