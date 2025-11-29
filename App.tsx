@@ -19,24 +19,32 @@ export const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initialize Lenis Smooth Scroll
-    const lenis = new window.Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-    });
+    // Initialize Lenis Smooth Scroll with Safety Check
+    let lenis: any;
+    
+    try {
+      if (window.Lenis) {
+        lenis = new window.Lenis({
+          duration: 1.2,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          direction: 'vertical',
+          gestureDirection: 'vertical',
+          smooth: true,
+          mouseMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+        });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+        function raf(time: number) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+      }
+    } catch (error) {
+      console.warn("Smooth scroll initialization failed, falling back to native scroll.", error);
     }
-
-    requestAnimationFrame(raf);
 
     // Loading timer
     const timer = setTimeout(() => {
@@ -45,7 +53,7 @@ export const App: React.FC = () => {
 
     return () => {
       clearTimeout(timer);
-      lenis.destroy();
+      if (lenis) lenis.destroy();
     };
   }, []);
 
